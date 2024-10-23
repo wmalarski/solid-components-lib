@@ -1,0 +1,25 @@
+{
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"preview-storybook": "turbo run preview-storybook",
+		"test": "turbo run test",
+		"test:coverage": "turbo run test:coverage",
+		"test:watch": "turbo run test:watch",
+		"types": "turbo run types",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"format-and-lint": "biome check .",
+		"format-and-lint:fix": "biome check . --write",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "turbo run build --filter=@rtt-design-system/docs^... && changeset publish"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.1",
+		"@changesets/cli": "^2.27.5",
+		"turbo": "latest"
+	},
+	"packageManager": "pnpm@9.0.4",
+	"name": "rtt-design-system"
+}

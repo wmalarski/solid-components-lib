@@ -1,0 +1,53 @@
+{
+	"name": "@rtt-design-system/ui",
+	"version": "0.1.2",
+	"license": "MIT",
+	"files": [
+		"dist/**"
+	],
+	"exports": {
+		"./styles.css": "./dist/styles.css",
+		".": {
+			"types": "./src/index.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"test:watch": "vitest --watch",
+		"types": "tsc --noEmit",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+	},
+	"devDependencies": {
+		"@rtt-design-system/tailwind-config": "workspace: *",
+		"@rtt-design-system/typescript-config": "workspace: *",
+		"@testing-library/jest-dom": "^6.4.6",
+		"@testing-library/react": "^16.0.0",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"@vitest/coverage-v8": "^1.6.0",
+		"autoprefixer": "^10.4.19",
+		"jsdom": "^24.1.0",
+		"postcss": "^8.4.38",
+		"tailwindcss": "^3.4.4",
+		"tsup": "^8.1.0",
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
+	},
+	"dependencies": {
+		"@radix-ui/react-dialog": "^1.0.5",
+		"@radix-ui/react-slot": "^1.0.2",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.1",
+		"react": "^18.3.1",
+		"tailwind-merge": "^2.3.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

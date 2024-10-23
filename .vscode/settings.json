@@ -1,0 +1,26 @@
+{
+	"cSpell.words": [
+		"autodocs",
+		"biomejs",
+		"clsx",
+		"Docgen",
+		"Filenaming",
+		"tailwindcss",
+		"treeshake",
+		"tsup",
+		"Turborepo"
+	],
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
+}
