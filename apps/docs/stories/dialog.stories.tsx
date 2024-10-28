@@ -1,3 +1,4 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@stt-design-system/ui";
 import {
 	Dialog,
@@ -9,7 +10,6 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@stt-design-system/ui";
-import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Dialog> = {
 	component: Dialog,
