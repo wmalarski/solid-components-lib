@@ -1,4 +1,4 @@
-# @rtt-design-system/tailwind-config
+# @stt-design-system/tailwind-config
 
 ## 0.1.0
 

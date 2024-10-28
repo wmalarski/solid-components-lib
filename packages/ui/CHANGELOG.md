@@ -1,4 +1,4 @@
-# @rtt-design-system/ui
+# @stt-design-system/ui
 
 ## 0.1.2
 

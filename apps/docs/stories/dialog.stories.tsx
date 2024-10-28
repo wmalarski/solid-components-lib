@@ -1,4 +1,4 @@
-import { Button } from "@rtt-design-system/ui";
+import { Button } from "@stt-design-system/ui";
 import {
 	Dialog,
 	DialogClose,
@@ -8,7 +8,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@rtt-design-system/ui";
+} from "@stt-design-system/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Dialog> = {

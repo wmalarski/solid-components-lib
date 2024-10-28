@@ -1,4 +1,4 @@
-# @rtt-design-system/typescript-config
+# @stt-design-system/typescript-config
 
 ## 0.1.0
 

@@ -1,4 +1,4 @@
-import { Button } from "@rtt-design-system/ui";
+import { Button } from "@stt-design-system/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
