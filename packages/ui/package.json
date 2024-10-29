@@ -2,9 +2,7 @@
 	"name": "@stt-design-system/ui",
 	"version": "0.1.2",
 	"license": "MIT",
-	"files": [
-		"dist/**"
-	],
+	"files": ["dist/**"],
 	"exports": {
 		"./styles.css": "./dist/styles.css",
 		".": {
