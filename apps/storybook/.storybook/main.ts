@@ -17,7 +17,8 @@ const config: StorybookConfig = {
 		getAbsolutePath("@storybook/addon-interactions"),
 	],
 	framework: {
-		name: "storybook-solidjs-vite",
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		name: getAbsolutePath("storybook-solidjs-vite") as any,
 		options: {},
 	},
 };

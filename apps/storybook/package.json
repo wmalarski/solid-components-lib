@@ -1,5 +1,5 @@
 {
-	"name": "example-bare",
+	"name": "@stt-design-system/storybook",
 	"type": "module",
 	"scripts": {
 		"dev": "storybook dev -p 6006",
@@ -12,21 +12,21 @@
 	},
 	"dependencies": {
 		"@stt-design-system/ui": "workspace: *",
-		"solid-js": "^1.9.2"
+		"solid-js": "^1.9.3"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"devDependencies": {
-		"@chromatic-com/storybook": "1.9.0",
-		"@storybook/addon-essentials": "8.3.6",
-		"@storybook/addon-interactions": "8.3.6",
-		"@storybook/addon-links": "8.3.6",
-		"@storybook/blocks": "8.3.6",
+		"@chromatic-com/storybook": "3.2.0",
+		"@storybook/addon-essentials": "^8.4.0-beta.3",
+		"@storybook/addon-interactions": "^8.4.0-beta.3",
+		"@storybook/addon-links": "^8.4.0-beta.3",
+		"@storybook/blocks": "^8.4.0-beta.3",
 		"@storybook/testing-library": "0.2.2",
 		"@stt-design-system/tailwind-config": "workspace: *",
 		"@stt-design-system/typescript-config": "workspace: *",
-		"storybook": "8.3.6",
+		"storybook": "^8.4.0-beta.3",
 		"storybook-solidjs": "1.0.0-beta.2",
 		"storybook-solidjs-vite": "1.0.0-beta.2"
 	}

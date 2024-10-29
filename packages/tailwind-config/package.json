@@ -7,7 +7,7 @@
 	},
 	"devDependencies": {
 		"@stt-design-system/typescript-config": "workspace: *",
-		"tailwindcss": "^3.4.4",
+		"tailwindcss": "^3.4.14",
 		"tailwindcss-animate": "^1.0.7"
 	}
 }
