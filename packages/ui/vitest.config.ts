@@ -1,8 +1,8 @@
-import react from "@vitejs/plugin-react";
+import solid from "vite-plugin-solid";
 import { coverageConfigDefaults, defineConfig } from "vitest/config";
 
 export default defineConfig({
-	plugins: [react()],
+	plugins: [solid()],
 	test: {
 		globals: true,
 		environment: "jsdom",

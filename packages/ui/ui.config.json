@@ -7,7 +7,7 @@
 		"prefix": "stt-"
 	},
 	"aliases": {
-		"components": "~/",
+		"components": "~/components",
 		"utils": "~/utils"
 	}
 }

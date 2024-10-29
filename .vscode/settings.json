@@ -5,6 +5,8 @@
 		"clsx",
 		"Docgen",
 		"Filenaming",
+		"kobalte",
+		"solidjs",
 		"tailwindcss",
 		"treeshake",
 		"tsup",
