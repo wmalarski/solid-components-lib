@@ -1,4 +1,4 @@
-export { Button, buttonVariants, type ButtonProps } from "./components/button";
+export { Button, buttonVariants, type ButtonProps } from "./ui/button";
 export {
 	Dialog,
 	DialogContent,
@@ -7,5 +7,5 @@ export {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "./components/dialog";
+} from "./ui/dialog";
 export { cn } from "./utils";

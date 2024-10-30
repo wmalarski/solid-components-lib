@@ -5,6 +5,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"jsx": "preserve",
+		"types": ["@testing-library/jest-dom"],
 		"jsxImportSource": "solid-js",
 		"paths": {
 			"~/*": ["src/*"]
