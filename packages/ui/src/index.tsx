@@ -1,4 +1,4 @@
-export { Button, type ButtonProps, buttonVariants } from "./components/button";
+export { Button, buttonVariants, type ButtonProps } from "./components/button";
 export {
 	Dialog,
 	DialogContent,

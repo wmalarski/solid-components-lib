@@ -1,7 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+button {
+	color: red;
+}
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* 
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -93,9 +97,9 @@
 
 		--radius: 0.5rem;
 	}
-}
+} */
 
-@layer base {
+/* @layer base {
 	* {
 		@apply border-border;
 	}
@@ -136,4 +140,4 @@
 
 ::-webkit-scrollbar-corner {
 	display: none;
-}
+} */
