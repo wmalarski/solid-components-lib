@@ -4,18 +4,18 @@
 	"license": "MIT",
 
 	"source": "src/index.tsx",
-	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
-	"types": "dist/types/index.d.ts",
+	"main": "dist/index/index.common.js",
+	"module": "dist/index/index.module.js",
+	"types": "dist/index/index.d.ts",
 	"files": ["dist"],
 	"exports": {
 		"./styles.css": "./dist/styles.css",
 		".": {
-			"solid": "./dist/source/index.jsx",
-			"import": "./dist/esm/index.js",
-			"browser": "./dist/esm/index.js",
-			"require": "./dist/cjs/index.js",
-			"node": "./dist/cjs/index.js",
+			"solid": "./dist/index/index.jsx",
+			"import": "./dist/index/index.module.js",
+			"browser": "./dist/index/index.module.js",
+			"require": "./dist/index/index.common.js",
+			"node": "./dist/index/index.common.js",
 			"types": "./src/index.tsx"
 		}
 	},

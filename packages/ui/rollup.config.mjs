@@ -4,24 +4,7 @@ import withSolid from "rollup-preset-solid";
 import tailwindcss from "tailwindcss";
 
 export default withSolid([
-	{
-		// external: [/\.css$/],
-		plugins: [
-			// postcss({
-			// 	plugins: [
-			// 		autoprefixer(),
-			// 		tailwindcss({
-			// 			content: ["./src/**/*.tsx"],
-			// 		}),
-			// 	],
-			// 	extract: false,
-			// 	modules: false,
-			// 	autoModules: false,
-			// 	minimize: true,
-			// 	inject: false,
-			// }),
-		],
-	},
+	{ input: "src/index.tsx", targets: ["esm", "cjs"] },
 	{
 		input: "src/styles.css",
 		output: { file: "dist/styles.css" },

@@ -1,4 +1,3 @@
-import type {} from "@storybook/react";
 import {
 	Button,
 	Dialog,
