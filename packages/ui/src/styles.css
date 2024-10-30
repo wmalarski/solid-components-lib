@@ -1,11 +1,7 @@
-button {
-	color: red;
-}
-
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
-/* 
+@tailwind utilities;
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -97,12 +93,13 @@ button {
 
 		--radius: 0.5rem;
 	}
-} */
+}
 
 /* @layer base {
 	* {
 		@apply border-border;
 	}
+
 	body {
 		@apply bg-background text-foreground;
 		font-feature-settings: "rlig" 1, "calt" 1;

@@ -6,7 +6,7 @@ import type { PolymorphicProps } from "@kobalte/core/polymorphic";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 
-import { cn } from "~/utils";
+import { cn } from "../utils";
 
 const buttonVariants = cva(
 	"stt-inline-flex stt-items-center stt-justify-center stt-rounded-md stt-text-sm stt-font-medium stt-ring-offset-background stt-transition-colors focus-visible:stt-outline-none focus-visible:stt-ring-2 focus-visible:stt-ring-ring focus-visible:stt-ring-offset-2 disabled:stt-pointer-events-none disabled:stt-opacity-50",
