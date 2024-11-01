@@ -1,4 +1,5 @@
 import { Title } from "@solidjs/meta";
+import { Button } from "@stt-design-system/ui";
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 				</a>{" "}
 				to learn how to build SolidStart apps.
 			</p>
+			<Button>AA</Button>
 		</main>
 	);
 }
