@@ -1,12 +1,13 @@
 # Turborepo Design System
 
-This React design system is powered by:
+This Solid design system is powered by:
 
 - 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
-- 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
+- 🚀 [SolidJS](https://docs.solidjs.com/) — JavaScript library for user interfaces
 - 💅 [Tailwind](https://tailwindcss.com/) — Styling solution
-- 👷 [Radix-UI](https://www.radix-ui.com/) — Component library
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
+- 👷 [Solid-UI](https://www.solid-ui.com/) — Reusable components 
+- 👷 [Kobalte](https://kobalte.dev) — Component library
+- 🛠 [Rollup.js](https://rollupjs.org/) — TypeScript bundler 
 - 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
 
 As well as a few others tools:
@@ -34,115 +35,13 @@ Using Turborepo simplifies managing your design system monorepo, as you can have
 
 This Turborepo includes the following packages and applications:
 
-- `apps/docs`: Component documentation site with Storybook
-- `packages/ui`: Core React components
-- `packages/utils`: Shared React utilities
+- `apps/storybook`: Component documentation site with Storybook
+- `packages/ui`: Core Solid components
 - `packages/typescript-config`: Shared `tsconfig.json`s used throughout the Turborepo
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/). Workspaces enables us to "hoist" dependencies that are shared between packages to the root `package.json`. This means smaller `node_modules` folders and a better local dev experience. To install a dependency for the entire monorepo, use the `-w` workspaces flag with `pnpm add`.
 
 This example sets up your `.gitignore` to exclude all generated files, other folders like `node_modules` used to store your dependencies.
-
-### Compilation
-
-To make the core library code work across all browsers, we need to compile the raw TypeScript and React code to plain JavaScript. We can accomplish this with `tsup`, which uses `esbuild` to greatly improve performance.
-
-Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
-
-For `acme-core`, the `build` command is the following:
-
-```bash
-tsup src/index.tsx --format esm,cjs --dts --external react
-```
-
-`tsup` compiles `src/index.tsx`, which exports all of the components in the design system, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `acme-core` then instructs the consumer to select the correct format:
-
-```json:acme-core/package.json
-{
-  "name": "@acme/core",
-  "version": "0.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-}
-```
-
-Run `pnpm build` to confirm compilation is working correctly. You should see a folder `acme-core/dist` which contains the compiled output.
-
-```bash
-acme-core
-└── dist
-    ├── index.d.ts  <-- Types
-    ├── index.js    <-- CommonJS version
-    └── index.mjs   <-- ES Modules version
-```
-
-## Components
-
-Each file inside of `acme-core/src` is a component inside our design system. For example:
-
-```tsx:acme-core/src/Button.tsx
-import * as React from 'react';
-
-export interface ButtonProps {
-  children: React.ReactNode;
-}
-
-export function Button(props: ButtonProps) {
-  return <button>{props.children}</button>;
-}
-
-Button.displayName = 'Button';
-```
-
-When adding a new file, ensure the component is also exported from the entry `index.tsx` file:
-
-```tsx:acme-core/src/index.tsx
-import * as React from "react";
-export { Button, type ButtonProps } from "./Button";
-// Add new component exports here
-```
-
-## Storybook
-
-Storybook provides us with an interactive UI playground for our components. This allows us to preview our components in the browser and instantly see changes when developing locally. This example preconfigures Storybook to:
-
-- Use Vite to bundle stories instantly (in milliseconds)
-- Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@acme-core` for imports
-- Write MDX for component documentation pages
-
-For example, here's the included Story for our `Button` component:
-
-```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@acme-core/src';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-
-<Meta title="Components/Button" component={Button} />
-
-# Button
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
-
-## Props
-
-<Props of={Box} />
-
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
-```
-
-This example includes a few helpful Storybook scripts:
-
-- `pnpm dev`: Starts Storybook in dev mode with hot reloading at `localhost:6006`
-- `pnpm build`: Builds the Storybook UI and generates the static HTML files
-- `pnpm preview-storybook`: Starts a local server to view the generated Storybook UI
 
 ## Versioning & Publishing Packages
 
