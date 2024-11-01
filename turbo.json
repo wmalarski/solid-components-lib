@@ -12,6 +12,11 @@
 			"cache": false,
 			"persistent": true
 		},
+		"start": {
+			"cache": false,
+			"persistent": true,
+			"outputs": [".output"]
+		},
 		"test": {},
 		"test:coverage": {},
 		"test:watch": {
